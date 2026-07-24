@@ -1,0 +1,6067 @@
+{
+  "generatedAt": "2026-07-05T20:36:00.561Z",
+  "totalCases": 29,
+  "totalPass": 28,
+  "totalFail": 1,
+  "cases": [
+    {
+      "calculator": "single-phase-power",
+      "title": "Single-Phase Power Calculator",
+      "category": "power",
+      "testName": "120V · 15A · pf 0.85",
+      "input": {
+        "V": 120,
+        "I": 15,
+        "pf": 0.85,
+        "phiUnit": "lagging"
+      },
+      "checks": [
+        {
+          "field": "row:\"Apparent power S\".value",
+          "expected": 1800,
+          "actual": 1800,
+          "pass": true
+        },
+        {
+          "field": "row:\"Apparent power S\".unit",
+          "expected": "VA",
+          "actual": "VA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Real power P\".value",
+          "expected": 1530,
+          "actual": 1530,
+          "pass": true
+        },
+        {
+          "field": "row:\"Real power P\".unit",
+          "expected": "W",
+          "actual": "W",
+          "pass": true
+        },
+        {
+          "field": "row:\"Reactive power Q\".value",
+          "expected": 948.2,
+          "actual": 948.21,
+          "pass": true
+        },
+        {
+          "field": "row:\"Reactive power Q\".unit",
+          "expected": "var",
+          "actual": "var",
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase angle\".value",
+          "expected": 31.79,
+          "actual": 31.79,
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase angle\".unit",
+          "expected": "°",
+          "actual": "°",
+          "pass": true
+        },
+        {
+          "field": "raw.S",
+          "expected": 1800,
+          "actual": 1800,
+          "pass": true
+        },
+        {
+          "field": "raw.P",
+          "expected": 1530,
+          "actual": 1530,
+          "pass": true
+        },
+        {
+          "field": "raw.Q",
+          "expected": 948.2,
+          "actual": 948.2088377567467,
+          "pass": true
+        },
+        {
+          "field": "raw.phi",
+          "expected": 31.79,
+          "actual": 31.78833061705162,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "S = 1.8 kVA · P = 1.53 kW · Q = 0.948 kVAr",
+          "actual": "S = 1.8 kVA · P = 1.53 kW · Q = 0.948 kVAr",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE 1459-2010",
+          "actual": "IEEE 1459-2010",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Defines measurement of AC electric power under sinusoidal and non-sinusoidal conditions. Above formulas assume sinusoidal, balanced load.",
+          "actual": "Defines measurement of AC electric power under sinusoidal and non-sinusoidal conditions. Above formulas assume sinusoidal, balanced load.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 60038",
+          "actual": "IEC 60038",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Standard nominal voltages: 230 V / 400 V (50 Hz) for IEC markets.",
+          "actual": "Standard nominal voltages: 230 V / 400 V (50 Hz) for IEC markets.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Apparent power",
+          "actual": "Apparent power",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "S = V · I",
+          "actual": "S = V · I",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "V (V), I (A) → VA",
+          "actual": "V (V), I (A) → VA",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Real power",
+          "actual": "Real power",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "P = V · I · cos φ",
+          "actual": "P = V · I · cos φ",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "cos φ = power factor",
+          "actual": "cos φ = power factor",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Reactive power",
+          "actual": "Reactive power",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "Q = V · I · sin φ",
+          "actual": "Q = V · I · sin φ",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "sin φ = √(1 − cos²φ)",
+          "actual": "sin φ = √(1 − cos²φ)",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "Power triangle",
+          "actual": "Power triangle",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "S² = P² + Q²",
+          "actual": "S² = P² + Q²",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "P, Q, S form a right triangle",
+          "actual": "P, Q, S form a right triangle",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=4",
+          "actual": 4,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 36,
+      "failCount": 0
+    },
+    {
+      "calculator": "three-phase-power",
+      "title": "Three-Phase Power Calculator",
+      "category": "three-phase",
+      "testName": "480V · 100A · pf 0.8 (from V&I)",
+      "input": {
+        "Vll": 480,
+        "I": 100,
+        "pf": 0.8,
+        "mode": "from_IV",
+        "P_or_S": 30
+      },
+      "checks": [
+        {
+          "field": "row:\"Apparent power S\".value",
+          "expected": 83.138,
+          "actual": 83.138,
+          "pass": true
+        },
+        {
+          "field": "row:\"Apparent power S\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Real power P\".value",
+          "expected": 66.511,
+          "actual": 66.511,
+          "pass": true
+        },
+        {
+          "field": "row:\"Real power P\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Reactive power Q\".value",
+          "expected": 49.883,
+          "actual": 49.883,
+          "pass": true
+        },
+        {
+          "field": "row:\"Reactive power Q\".unit",
+          "expected": "kVAr",
+          "actual": "kVAr",
+          "pass": true
+        },
+        {
+          "field": "row:\"Line current I\".value",
+          "expected": 100,
+          "actual": 100,
+          "pass": true
+        },
+        {
+          "field": "row:\"Line current I\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase voltage V_LN\".value",
+          "expected": 277.13,
+          "actual": 277.1,
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase voltage V_LN\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "P = 66.51 kW · S = 83.14 kVA · I = 100 A",
+          "actual": "P = 66.51 kW · S = 83.14 kVA · I = 100 A",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60038",
+          "actual": "IEC 60038",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Standard 3φ voltages: 400 V, 690 V (LV); 3.3, 6.6, 11, 22, 33 kV (MV).",
+          "actual": "Standard 3φ voltages: 400 V, 690 V (LV); 3.3, 6.6, 11, 22, 33 kV (MV).",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "ANSI",
+          "actual": "ANSI",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "ANSI C84.1",
+          "actual": "ANSI C84.1",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Standard 3φ voltages: 208, 240, 480, 600 V (LV); 4.16, 13.8, 34.5 kV (MV).",
+          "actual": "Standard 3φ voltages: 208, 240, 480, 600 V (LV); 4.16, 13.8, 34.5 kV (MV).",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "PF below 0.85 — consider capacitor bank for PF correction.",
+          "actual": "PF below 0.85 — consider capacitor bank for PF correction.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Apparent power",
+          "actual": "Apparent power",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "S = √3 · V_LL · I",
+          "actual": "S = √3 · V_LL · I",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "V_LL (V), I (A) → VA",
+          "actual": "V_LL (V), I (A) → VA",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Real power",
+          "actual": "Real power",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "P = √3 · V_LL · I · cos φ",
+          "actual": "P = √3 · V_LL · I · cos φ",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "cos φ = power factor",
+          "actual": "cos φ = power factor",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Reactive power",
+          "actual": "Reactive power",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "Q = √3 · V_LL · I · sin φ",
+          "actual": "Q = √3 · V_LL · I · sin φ",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "sin φ = √(1 − cos²φ)",
+          "actual": "sin φ = √(1 − cos²φ)",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "Line current",
+          "actual": "Line current",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "I = S / (√3 · V_LL)",
+          "actual": "I = S / (√3 · V_LL)",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "From S and V_LL",
+          "actual": "From S and V_LL",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=4",
+          "actual": 4,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 35,
+      "failCount": 0
+    },
+    {
+      "calculator": "power-factor",
+      "title": "Power Factor Calculator",
+      "category": "power",
+      "testName": "P=50kW · S=62.5kVA",
+      "input": {
+        "mode": "from_PS",
+        "P": 50,
+        "S": 62.5,
+        "Q": 30,
+        "phi": 30
+      },
+      "checks": [
+        {
+          "field": "row:\"Power factor (cos φ)\".value",
+          "expected": 0.8,
+          "actual": 0.8,
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase angle φ\".value",
+          "expected": 36.87,
+          "actual": 36.87,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "warn",
+          "actual": "warn",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "PF = 0.8 (lagging) · φ = 36.87°",
+          "actual": "PF = 0.8 (lagging) · φ = 36.87°",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE 1459-2010",
+          "actual": "IEEE 1459-2010",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "For distorted waveforms, true PF = (P₁ / S) where P₁ is fundamental real power. Displacement PF = cos φ₁ from fundamental phase shift only.",
+          "actual": "For distorted waveforms, true PF = (P₁ / S) where P₁ is fundamental real power. Displacement PF = cos φ₁ from fundamental phase shift only.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "PF below 0.85 — consider installing capacitor bank to reach PF ≥ 0.95.",
+          "actual": "PF below 0.85 — consider installing capacitor bank to reach PF ≥ 0.95.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "True PF",
+          "actual": "True PF",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "cos φ = P / S",
+          "actual": "cos φ = P / S",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "P (W), S (VA)",
+          "actual": "P (W), S (VA)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "From P & Q",
+          "actual": "From P & Q",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "cos φ = P / √(P² + Q²)",
+          "actual": "cos φ = P / √(P² + Q²)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "P, Q",
+          "actual": "P, Q",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Phase angle",
+          "actual": "Phase angle",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "φ = cos⁻¹(PF)",
+          "actual": "φ = cos⁻¹(PF)",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "PF",
+          "actual": "PF",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 21,
+      "failCount": 0
+    },
+    {
+      "calculator": "pf-correction",
+      "title": "Power Factor Correction Capacitor Sizing",
+      "category": "power",
+      "testName": "100kW · 0.8→0.95 · 480V 3φ",
+      "input": {
+        "P": 100,
+        "pf1": 0.8,
+        "pf2": 0.95,
+        "V": 480,
+        "ph": "3"
+      },
+      "checks": [
+        {
+          "field": "row:\"Capacitor bank Qc\".value",
+          "expected": 42.13,
+          "actual": 42.13,
+          "pass": true
+        },
+        {
+          "field": "row:\"Capacitor bank Qc\".unit",
+          "expected": "kVAr",
+          "actual": "kVAr",
+          "pass": true
+        },
+        {
+          "field": "row:\"Current before I₁\".value",
+          "expected": 150.33,
+          "actual": 150.4,
+          "pass": true
+        },
+        {
+          "field": "row:\"Current before I₁\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Current after I₂\".value",
+          "expected": 126.58,
+          "actual": 126.6,
+          "pass": true
+        },
+        {
+          "field": "row:\"Current after I₂\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Released capacity\".value",
+          "expected": 15.8,
+          "actual": 15.8,
+          "pass": true
+        },
+        {
+          "field": "row:\"Released capacity\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "picks.capacitorKVAr",
+          "expected": 42.13,
+          "actual": 42.13,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "err",
+          "actual": "err",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Install ≈ 42.13 kVAr of capacitors to bring PF from 0.8 to 0.95",
+          "actual": "Install ≈ 42.13 kVAr of capacitors to bring PF from 0.8 to 0.95",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE 18-2002",
+          "actual": "IEEE 18-2002",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Standard for shunt power capacitors. Capacitors are typically sized in standard kVAr steps (5, 7.5, 10, 12.5, 15, 20, 25, 30, 40, 50, 60, 75, 100, 125, 150, 200, 250, 300, 400, 500 kVAr).",
+          "actual": "Standard for shunt power capacitors. Capacitors are typically sized in standard kVAr steps (5, 7.5, 10, 12.5, 15, 20, 25, 30, 40, 50, 60, 75, 100, 125, 150, 200, 250, 300, 400, 500 kVAr).",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 60831-1/2",
+          "actual": "IEC 60831-1/2",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Shunt power capacitors for AC systems having a rated voltage up to and including 1000 V.",
+          "actual": "Shunt power capacitors for AC systems having a rated voltage up to and including 1000 V.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Round capacitor bank to nearest standard kVAr (typical 5/10/25/50 kVAr steps). Total ≈ 42.1 kVAr.",
+          "actual": "Round capacitor bank to nearest standard kVAr (typical 5/10/25/50 kVAr steps). Total ≈ 42.1 kVAr.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "If harmonic distortion is present (THD-V > 5%, THD-I > 8%), install detuned reactor (5–7% p.f.) to avoid resonance.",
+          "actual": "If harmonic distortion is present (THD-V > 5%, THD-I > 8%), install detuned reactor (5–7% p.f.) to avoid resonance.",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "Verify capacitor inrush current rating with switching contactors (pre-insertion resistors or tuned reactors).",
+          "actual": "Verify capacitor inrush current rating with switching contactors (pre-insertion resistors or tuned reactors).",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Capacitor kVAr",
+          "actual": "Capacitor kVAr",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "Qc = P · (tan φ₁ − tan φ₂)",
+          "actual": "Qc = P · (tan φ₁ − tan φ₂)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "P (W), φ₁ = acos(pf₁), φ₂ = acos(pf₂)",
+          "actual": "P (W), φ₁ = acos(pf₁), φ₂ = acos(pf₂)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Released current",
+          "actual": "Released current",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "ΔI = I₁ − I₂",
+          "actual": "ΔI = I₁ − I₂",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Reduction in line current",
+          "actual": "Reduction in line current",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=3",
+          "actual": 3,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 30,
+      "failCount": 0
+    },
+    {
+      "calculator": "kw-kva-hp",
+      "title": "kW / kVA / HP Converter",
+      "category": "conversion",
+      "testName": "75 kW · pf 0.9",
+      "input": {
+        "value": 75,
+        "pf": 0.9
+      },
+      "checks": [
+        {
+          "field": "row:\"W\".value",
+          "expected": 75000,
+          "actual": 75000,
+          "pass": true
+        },
+        {
+          "field": "row:\"W\".unit",
+          "expected": "W",
+          "actual": "W",
+          "pass": true
+        },
+        {
+          "field": "row:\"kW\".value",
+          "expected": 75,
+          "actual": 75,
+          "pass": true
+        },
+        {
+          "field": "row:\"kW\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"kVA\".value",
+          "expected": 83.333,
+          "actual": 83.333,
+          "pass": true
+        },
+        {
+          "field": "row:\"kVA\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"HP (mechanical)\".value",
+          "expected": 100.57,
+          "actual": 100.577,
+          "pass": true
+        },
+        {
+          "field": "row:\"HP (mechanical)\".unit",
+          "expected": "hp",
+          "actual": "hp",
+          "pass": true
+        },
+        {
+          "field": "row:\"PS (metric)\".value",
+          "expected": 101.97,
+          "actual": 101.972,
+          "pass": true
+        },
+        {
+          "field": "row:\"PS (metric)\".unit",
+          "expected": "PS",
+          "actual": "PS",
+          "pass": true
+        },
+        {
+          "field": "row:\"VAr\".value",
+          "expected": 36323,
+          "actual": 36324,
+          "pass": true
+        },
+        {
+          "field": "row:\"VAr\".unit",
+          "expected": "var",
+          "actual": "var",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "75 kW = 100.58 HP = 83.33 kVA @ PF 0.9",
+          "actual": "75 kW = 100.58 HP = 83.33 kVA @ PF 0.9",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "ISO 80000-4",
+          "actual": "ISO 80000-4",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "1 mechanical HP = 745.6999 W. 1 metric HP (PS) = 735.49875 W.",
+          "actual": "1 mechanical HP = 745.6999 W. 1 metric HP (PS) = 735.49875 W.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "kW → kVA",
+          "actual": "kW → kVA",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "kVA = kW / cos φ",
+          "actual": "kVA = kW / cos φ",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "cos φ = power factor",
+          "actual": "cos φ = power factor",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "kW → HP",
+          "actual": "kW → HP",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "HP = kW · 1000 / 745.7",
+          "actual": "HP = kW · 1000 / 745.7",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Mechanical horsepower",
+          "actual": "Mechanical horsepower",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "kW → PS",
+          "actual": "kW → PS",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "PS = kW · 1000 / 735.5",
+          "actual": "PS = kW · 1000 / 735.5",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "Metric HP (DIN 66036)",
+          "actual": "Metric HP (DIN 66036)",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 30,
+      "failCount": 0
+    },
+    {
+      "calculator": "current-calculator",
+      "title": "Current Calculator (1φ / 3φ)",
+      "category": "power",
+      "testName": "3φ 690V · 75kW · pf 0.85 · eff 0.95",
+      "input": {
+        "phase": "3",
+        "V": 690,
+        "P": 75,
+        "pf": 0.85,
+        "eff": 0.95
+      },
+      "checks": [
+        {
+          "field": "row:\"Apparent power S\".value",
+          "expected": 92.88,
+          "actual": 92.879,
+          "pass": true
+        },
+        {
+          "field": "row:\"Apparent power S\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Line current I\".value",
+          "expected": 77.72,
+          "actual": 77.72,
+          "pass": true
+        },
+        {
+          "field": "row:\"Line current I\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "I = 77.72 A (3φ, 690 V)",
+          "actual": "I = 77.72 A (3φ, 690 V)",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60364",
+          "actual": "IEC 60364",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Design current is the current the circuit is intended to carry in normal service. Cable ampacity must exceed design current after derating.",
+          "actual": "Design current is the current the circuit is intended to carry in normal service. Cable ampacity must exceed design current after derating.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Apply 125% factor for continuous loads (>3h): I_cont = 97.1 A.",
+          "actual": "Apply 125% factor for continuous loads (>3h): I_cont = 97.1 A.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Select OCPD next standard size up.",
+          "actual": "Select OCPD next standard size up.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "3φ current",
+          "actual": "3φ current",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I = P / (√3 · V_LL · PF · η)",
+          "actual": "I = P / (√3 · V_LL · PF · η)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "P (W), V_LL, PF, η",
+          "actual": "P (W), V_LL, PF, η",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "1φ current",
+          "actual": "1φ current",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "I = P / (V · PF · η)",
+          "actual": "I = P / (V · PF · η)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "P (W), V, PF, η",
+          "actual": "P (W), V, PF, η",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 21,
+      "failCount": 0
+    },
+    {
+      "calculator": "demand-load",
+      "title": "Demand Load & Load Factor Calculator",
+      "category": "power",
+      "testName": "3 load groups · 5000h/yr",
+      "input": {
+        "loads": "[{\"name\":\"Lighting\",\"qty\":80,\"unit\":0.05,\"df\":0.9},{\"name\":\"HVAC\",\"qty\":3,\"unit\":10,\"df\":0.7},{\"name\":\"Receptacles\",\"qty\":50,\"unit\":0.18,\"df\":0.4}]",
+        "hoursPerYear": 5000
+      },
+      "checks": [
+        {
+          "field": "row:\"Connected load\".value",
+          "expected": 43,
+          "actual": 43,
+          "pass": true
+        },
+        {
+          "field": "row:\"Connected load\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Maximum demand\".value",
+          "expected": 28.2,
+          "actual": 28.2,
+          "pass": true
+        },
+        {
+          "field": "row:\"Maximum demand\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Annual energy\".value",
+          "expected": 141,
+          "actual": 141,
+          "pass": true
+        },
+        {
+          "field": "row:\"Annual energy\".unit",
+          "expected": "MWh",
+          "actual": "MWh",
+          "pass": true
+        },
+        {
+          "field": "row:\"Average demand\".value",
+          "expected": 16.1,
+          "actual": 16.1,
+          "pass": true
+        },
+        {
+          "field": "row:\"Average demand\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Load factor\".value",
+          "expected": 57.1,
+          "actual": 57.1,
+          "pass": true
+        },
+        {
+          "field": "row:\"Load factor\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Peak demand 28.2 kW from 43 kW connected (3 groups)",
+          "actual": "Peak demand 28.2 kW from 43 kW connected (3 groups)",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "NEC 220",
+          "actual": "NEC 220",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Demand factors per NEC Table 220.42 (lighting), 220.44 (non-coincident), 220.50 (motors), etc. Use only where local code allows.",
+          "actual": "Demand factors per NEC Table 220.42 (lighting), 220.44 (non-coincident), 220.50 (motors), etc. Use only where local code allows.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 60364",
+          "actual": "IEC 60364",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Demand factors per IEC 60364-8-1 (low-voltage installations) — different from NEC.",
+          "actual": "Demand factors per IEC 60364-8-1 (low-voltage installations) — different from NEC.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Validate demand factors against local code — NEC and IEC differ significantly.",
+          "actual": "Validate demand factors against local code — NEC and IEC differ significantly.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Connected load",
+          "actual": "Connected load",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "Σ(qty · unit)",
+          "actual": "Σ(qty · unit)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "Per load group",
+          "actual": "Per load group",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Maximum demand",
+          "actual": "Maximum demand",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "Σ(qty · unit · DF)",
+          "actual": "Σ(qty · unit · DF)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "DF = demand factor (NEC 220)",
+          "actual": "DF = demand factor (NEC 220)",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Load factor",
+          "actual": "Load factor",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "LF = avg / peak",
+          "actual": "LF = avg / peak",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "avg = annual energy / 8760 h",
+          "actual": "avg = annual energy / 8760 h",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 32,
+      "failCount": 0
+    },
+    {
+      "calculator": "delta-wye",
+      "title": "Delta ↔ Wye Voltage & Current Converter",
+      "category": "three-phase",
+      "testName": "Y · V · L→P · 690V",
+      "input": {
+        "system": "wye",
+        "quantity": "V",
+        "direction": "L2P",
+        "value": 690
+      },
+      "checks": [
+        {
+          "field": "row:\"Input\".value",
+          "expected": 690,
+          "actual": 690,
+          "pass": true
+        },
+        {
+          "field": "row:\"Input\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "row:\"phase\".value",
+          "expected": 398.37,
+          "actual": 398.37,
+          "pass": true
+        },
+        {
+          "field": "row:\"phase\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "690 V → phase = 398.37 V (Y (wye))",
+          "actual": "690 V → phase = 398.37 V (Y (wye))",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE Std 141 (Red Book)",
+          "actual": "IEEE Std 141 (Red Book)",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "For balanced 3φ loads, Y: V_LL = √3 V_LN, I_L = I_phase. Δ: V_LL = V_phase, I_L = √3 I_phase.",
+          "actual": "For balanced 3φ loads, Y: V_LL = √3 V_LN, I_L = I_phase. Δ: V_LL = V_phase, I_L = √3 I_phase.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Memorize: V ratio is √3 in Y; I ratio is √3 in Δ. The other quantity is 1:1.",
+          "actual": "Memorize: V ratio is √3 in Y; I ratio is √3 in Δ. The other quantity is 1:1.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Y voltage",
+          "actual": "Y voltage",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "V_LL = √3 · V_LN",
+          "actual": "V_LL = √3 · V_LN",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "Line vs phase voltage",
+          "actual": "Line vs phase voltage",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Δ current",
+          "actual": "Δ current",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "I_L = √3 · I_phase",
+          "actual": "I_L = √3 · I_phase",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Δ: line current is √3 × phase",
+          "actual": "Δ: line current is √3 × phase",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Y current",
+          "actual": "Y current",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "I_L = I_phase",
+          "actual": "I_L = I_phase",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "Y: line = phase current",
+          "actual": "Y: line = phase current",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 23,
+      "failCount": 0
+    },
+    {
+      "calculator": "balanced-load",
+      "title": "Balanced Three-Phase Load Calculator",
+      "category": "three-phase",
+      "testName": "Y · 690V · Z=20Ω · φ=45°",
+      "input": {
+        "system": "wye",
+        "Vll": 690,
+        "Z": 20,
+        "phi": 45
+      },
+      "checks": [
+        {
+          "field": "row:\"Phase voltage V_ph\".value",
+          "expected": 398.37,
+          "actual": 398.37,
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase voltage V_ph\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase current I_ph\".value",
+          "expected": 19.92,
+          "actual": 19.92,
+          "pass": true
+        },
+        {
+          "field": "row:\"Phase current I_ph\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Line current I_L\".value",
+          "expected": 19.92,
+          "actual": 19.92,
+          "pass": true
+        },
+        {
+          "field": "row:\"Line current I_L\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Total apparent S\".value",
+          "expected": 23.805,
+          "actual": 23.805,
+          "pass": true
+        },
+        {
+          "field": "row:\"Total apparent S\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Total real P\".value",
+          "expected": 16.832,
+          "actual": 16.833,
+          "pass": true
+        },
+        {
+          "field": "row:\"Total real P\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Total reactive Q\".value",
+          "expected": 16.832,
+          "actual": 16.833,
+          "pass": true
+        },
+        {
+          "field": "row:\"Total reactive Q\".unit",
+          "expected": "kVAr",
+          "actual": "kVAr",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "I_L = 19.92 A · S = 23.81 kVA · PF = 0.707",
+          "actual": "I_L = 19.92 A · S = 23.81 kVA · PF = 0.707",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE Std 141",
+          "actual": "IEEE Std 141",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "For unbalanced loads, use symmetrical components (positive/negative/zero sequence).",
+          "actual": "For unbalanced loads, use symmetrical components (positive/negative/zero sequence).",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 6,
+          "actual": 6,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Y: phase voltage",
+          "actual": "Y: phase voltage",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "V_ph = V_LL / √3",
+          "actual": "V_ph = V_LL / √3",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Δ: phase voltage",
+          "actual": "Δ: phase voltage",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "V_ph = V_LL",
+          "actual": "V_ph = V_LL",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Phase current",
+          "actual": "Phase current",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "I_ph = V_ph / Z",
+          "actual": "I_ph = V_ph / Z",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "Z = phase impedance",
+          "actual": "Z = phase impedance",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "Y: line current",
+          "actual": "Y: line current",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "I_L = I_ph",
+          "actual": "I_L = I_ph",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[4].name",
+          "expected": "Δ: line current",
+          "actual": "Δ: line current",
+          "pass": true
+        },
+        {
+          "field": "formulas[4].expression",
+          "expected": "I_L = √3 · I_ph",
+          "actual": "I_L = √3 · I_ph",
+          "pass": true
+        },
+        {
+          "field": "formulas[4].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[5].name",
+          "expected": "Total power",
+          "actual": "Total power",
+          "pass": true
+        },
+        {
+          "field": "formulas[5].expression",
+          "expected": "S = 3 · V_ph · I_ph",
+          "actual": "S = 3 · V_ph · I_ph",
+          "pass": true
+        },
+        {
+          "field": "formulas[5].variables",
+          "expected": "For balanced 3φ",
+          "actual": "For balanced 3φ",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 39,
+      "failCount": 0
+    },
+    {
+      "calculator": "transformer-sizing",
+      "title": "Transformer Sizing Calculator",
+      "category": "transformer",
+      "testName": "250kW · 480V · 3φ · df 0.9 · grow 15%",
+      "input": {
+        "P": 250,
+        "pf": 0.85,
+        "df": 0.9,
+        "grow": 15,
+        "Vll": 480,
+        "eff": 0.97,
+        "ph": "3"
+      },
+      "checks": [
+        {
+          "field": "row:\"Required apparent S\".value",
+          "expected": 304.41,
+          "actual": 304.41,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required apparent S\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Adjusted for losses\".value",
+          "expected": 313.83,
+          "actual": 313.83,
+          "pass": true
+        },
+        {
+          "field": "row:\"Adjusted for losses\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Standard size\".value",
+          "expected": 500,
+          "actual": 500,
+          "pass": true
+        },
+        {
+          "field": "row:\"Standard size\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Standard size\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Loading at full load\".value",
+          "expected": 60.88,
+          "actual": 60.9,
+          "pass": true
+        },
+        {
+          "field": "row:\"Loading at full load\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "row:\"Secondary current\".value",
+          "expected": 601.4,
+          "actual": 601.4,
+          "pass": true
+        },
+        {
+          "field": "row:\"Secondary current\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "picks.transformerKVA",
+          "expected": 500,
+          "actual": 500,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Size 500 kVA (60.9% loaded) · 601.4 A secondary at 480 V",
+          "actual": "Size 500 kVA (60.9% loaded) · 601.4 A secondary at 480 V",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60076-1",
+          "actual": "IEC 60076-1",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Power transformer ratings: standard kVA per IEC 60076 (e.g., 100, 160, 200, 250, 315, 400, 500, 630, 800, 1000, 1250, 1600, 2000, 2500 kVA).",
+          "actual": "Power transformer ratings: standard kVA per IEC 60076 (e.g., 100, 160, 200, 250, 315, 400, 500, 630, 800, 1000, 1250, 1600, 2000, 2500 kVA).",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEEE C57.12.00",
+          "actual": "IEEE C57.12.00",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "IEEE standard kVA ratings for liquid-immersed distribution transformers.",
+          "actual": "IEEE standard kVA ratings for liquid-immersed distribution transformers.",
+          "pass": true
+        },
+        {
+          "field": "notes[2].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[2].reference",
+          "expected": "IEC 60076-7",
+          "actual": "IEC 60076-7",
+          "pass": true
+        },
+        {
+          "field": "notes[2].text",
+          "expected": "Loading guide — nameplate kVA is continuous at rated ambient; cyclic loading can exceed for short periods.",
+          "actual": "Loading guide — nameplate kVA is continuous at rated ambient; cyclic loading can exceed for short periods.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Apply 20% spare for future growth unless explicitly accounted for.",
+          "actual": "Apply 20% spare for future growth unless explicitly accounted for.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "For harmonic-rich loads (VFDs, rectifiers), use K-factor or H-grade transformer and derate per IEEE 1100.",
+          "actual": "For harmonic-rich loads (VFDs, rectifiers), use K-factor or H-grade transformer and derate per IEEE 1100.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Apparent load",
+          "actual": "Apparent load",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "S_load = (P/PF) · DF · (1 + g)",
+          "actual": "S_load = (P/PF) · DF · (1 + g)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "g = growth fraction",
+          "actual": "g = growth fraction",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Standard kVA",
+          "actual": "Standard kVA",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "S_tx = next ≥ S_load / η",
+          "actual": "S_tx = next ≥ S_load / η",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "η = transformer efficiency",
+          "actual": "η = transformer efficiency",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Loading",
+          "actual": "Loading",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "Loading% = S_load / S_tx",
+          "actual": "Loading% = S_load / S_tx",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=4",
+          "actual": 4,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 38,
+      "failCount": 0
+    },
+    {
+      "calculator": "transformer-current",
+      "title": "Transformer Primary & Secondary Current",
+      "category": "transformer",
+      "testName": "1000kVA · 22kV/400V · Z=5.75% · 3φ",
+      "input": {
+        "S": 1000,
+        "V1": 22000,
+        "V2": 400,
+        "Z": 5.75,
+        "ph": "3"
+      },
+      "checks": [
+        {
+          "field": "row:\"Primary current I₁\".value",
+          "expected": 26.24,
+          "actual": 26.24,
+          "pass": true
+        },
+        {
+          "field": "row:\"Primary current I₁\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Secondary current I₂\".value",
+          "expected": 1443.38,
+          "actual": 1443.38,
+          "pass": true
+        },
+        {
+          "field": "row:\"Secondary current I₂\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Turns ratio (a)\".value",
+          "expected": 55,
+          "actual": 55,
+          "pass": true
+        },
+        {
+          "field": "row:\"Impedance Z%\".value",
+          "expected": 5.75,
+          "actual": 5.75,
+          "pass": true
+        },
+        {
+          "field": "row:\"Impedance Z%\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "row:\"Short-circuit I_sc\".value",
+          "expected": 25102,
+          "actual": 25102,
+          "pass": true
+        },
+        {
+          "field": "row:\"Short-circuit I_sc\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Short-circuit I_sc\".status",
+          "expected": "warn",
+          "actual": "warn",
+          "pass": true
+        },
+        {
+          "field": "row:\"Short-circuit MVA\".value",
+          "expected": 17.39,
+          "actual": 17.39,
+          "pass": true
+        },
+        {
+          "field": "row:\"Short-circuit MVA\".unit",
+          "expected": "MVA",
+          "actual": "MVA",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "I₁ = 26.2 A · I₂ = 1443.4 A · I_sc ≈ 25102 A",
+          "actual": "I₁ = 26.2 A · I₂ = 1443.4 A · I_sc ≈ 25102 A",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE C57.12.00",
+          "actual": "IEEE C57.12.00",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Distribution transformer impedance typically 5–7.5% (≤ 500 kVA), 5.75–8% (larger). Lower Z = higher short-circuit current.",
+          "actual": "Distribution transformer impedance typically 5–7.5% (≤ 500 kVA), 5.75–8% (larger). Lower Z = higher short-circuit current.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 60076-5",
+          "actual": "IEC 60076-5",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Ability to withstand short-circuit tested per IEC 60076-5.",
+          "actual": "Ability to withstand short-circuit tested per IEC 60076-5.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Set LV breaker short-circuit rating ≥ I_sc (25102 A peak ≈ 35500 A peak make).",
+          "actual": "Set LV breaker short-circuit rating ≥ I_sc (25102 A peak ≈ 35500 A peak make).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Verify cable & bus bracing short-circuit withstand ≥ I_sc² · t (where t = breaker clearing time).",
+          "actual": "Verify cable & bus bracing short-circuit withstand ≥ I_sc² · t (where t = breaker clearing time).",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Primary current",
+          "actual": "Primary current",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I₁ = S / (√3 · V₁)",
+          "actual": "I₁ = S / (√3 · V₁)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "3φ; S in VA",
+          "actual": "3φ; S in VA",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Secondary current",
+          "actual": "Secondary current",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "I₂ = S / (√3 · V₂)",
+          "actual": "I₂ = S / (√3 · V₂)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "3φ",
+          "actual": "3φ",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Turns ratio",
+          "actual": "Turns ratio",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "a = V₁ / V₂",
+          "actual": "a = V₁ / V₂",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "Short-circuit",
+          "actual": "Short-circuit",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "I_sc = I₂ / Z%",
+          "actual": "I_sc = I₂ / Z%",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "Z% on secondary base",
+          "actual": "Z% on secondary base",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 38,
+      "failCount": 0
+    },
+    {
+      "calculator": "transformer-efficiency",
+      "title": "Transformer Efficiency & Losses",
+      "category": "transformer",
+      "testName": "500kVA · P0=0.6 · Pk=5.5 · 80% load",
+      "input": {
+        "S": 500,
+        "P0": 0.6,
+        "Pk": 5.5,
+        "load": 80,
+        "pf": 0.85
+      },
+      "checks": [
+        {
+          "field": "row:\"Output P_out\".value",
+          "expected": 340,
+          "actual": 340,
+          "pass": true
+        },
+        {
+          "field": "row:\"Output P_out\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"No-load loss P₀\".value",
+          "expected": 0.6,
+          "actual": 0.6,
+          "pass": true
+        },
+        {
+          "field": "row:\"No-load loss P₀\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Load loss Pk · L²\".value",
+          "expected": 3.52,
+          "actual": 3.52,
+          "pass": true
+        },
+        {
+          "field": "row:\"Load loss Pk · L²\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Total losses\".value",
+          "expected": 4.12,
+          "actual": 4.12,
+          "pass": true
+        },
+        {
+          "field": "row:\"Total losses\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Efficiency η\".value",
+          "expected": 98.8,
+          "actual": 98.8,
+          "pass": true
+        },
+        {
+          "field": "row:\"Efficiency η\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "row:\"Max-efficiency loading\".value",
+          "expected": 33,
+          "actual": 33,
+          "pass": true
+        },
+        {
+          "field": "row:\"Max-efficiency loading\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "row:\"Efficiency at peak\".value",
+          "expected": 98.8,
+          "actual": 99.15,
+          "pass": true
+        },
+        {
+          "field": "row:\"Efficiency at peak\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "info",
+          "actual": "ok",
+          "pass": false
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "η = 98.8% at 80% load · max at 33%",
+          "actual": "η = 98.8% at 80% load · max at 33%",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60076-1",
+          "actual": "IEC 60076-1",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Losses measured per IEC 60076-1. Load loss referenced to 75 °C winding temp.",
+          "actual": "Losses measured per IEC 60076-1. Load loss referenced to 75 °C winding temp.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEEE C57.12.90",
+          "actual": "IEEE C57.12.90",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Test code for distribution transformers — no-load loss at rated V & frequency; load loss at rated current.",
+          "actual": "Test code for distribution transformers — no-load loss at rated V & frequency; load loss at rated current.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Efficiency",
+          "actual": "Efficiency",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "η = P_out / (P_out + P₀ + Pk·L²)",
+          "actual": "η = P_out / (P_out + P₀ + Pk·L²)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "L = per-unit load",
+          "actual": "L = per-unit load",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Max efficiency",
+          "actual": "Max efficiency",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "L_max = √(P₀ / Pk)",
+          "actual": "L_max = √(P₀ / Pk)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Where load loss = no-load loss",
+          "actual": "Where load loss = no-load loss",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=3",
+          "actual": 3,
+          "pass": true
+        }
+      ],
+      "pass": false,
+      "passCount": 32,
+      "failCount": 1
+    },
+    {
+      "calculator": "motor-fl-current",
+      "title": "Motor Full-Load Current (FLC)",
+      "category": "motor",
+      "testName": "22kW · 400V · 3φ · pf 0.85 · eff 0.9 (calc)",
+      "input": {
+        "P": 22,
+        "V": 400,
+        "ph": "3",
+        "pf": 0.85,
+        "eff": 0.9,
+        "standard": "calc"
+      },
+      "checks": [
+        {
+          "field": "row:\"Full-load current I_FLC\".value",
+          "expected": 41.51,
+          "actual": 41.51,
+          "pass": true
+        },
+        {
+          "field": "row:\"Full-load current I_FLC\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Full-load current I_FLC\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Direct calculation\".value",
+          "expected": 41.51,
+          "actual": 41.51,
+          "pass": true
+        },
+        {
+          "field": "row:\"Direct calculation\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended OCPD (inverse-time)\".value",
+          "expected": 105,
+          "actual": 105,
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended OCPD (inverse-time)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended OCPD (inverse-time)\".status",
+          "expected": "info",
+          "actual": "info",
+          "pass": true
+        },
+        {
+          "field": "picks.motorFLC",
+          "expected": 41.5,
+          "actual": 41.5,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "FLC ≈ 41.5 A · OCPD ≈ 105 A (inverse-time)",
+          "actual": "FLC ≈ 41.5 A · OCPD ≈ 105 A (inverse-time)",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "NEC 430.250",
+          "actual": "NEC 430.250",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "FLC values for Design B, C, and D motors. Use next higher standard rating for breaker selection.",
+          "actual": "FLC values for Design B, C, and D motors. Use next higher standard rating for breaker selection.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "NEMA",
+          "actual": "NEMA",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "NEMA MG-1",
+          "actual": "NEMA MG-1",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Defines motor performance including locked-rotor current, breakdown torque, and slip.",
+          "actual": "Defines motor performance including locked-rotor current, breakdown torque, and slip.",
+          "pass": true
+        },
+        {
+          "field": "notes[2].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[2].reference",
+          "expected": "IEC 60034-1",
+          "actual": "IEC 60034-1",
+          "pass": true
+        },
+        {
+          "field": "notes[2].text",
+          "expected": "Rotating electrical machines — nameplate rating and performance.",
+          "actual": "Rotating electrical machines — nameplate rating and performance.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Inverse-time OCPD: next standard size ≥ 104 A (NEC 430.52 / IEC 60947-4-1).",
+          "actual": "Inverse-time OCPD: next standard size ≥ 104 A (NEC 430.52 / IEC 60947-4-1).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Choose overload relay at 115–125% of FLC for 1.15 SF motors, or at 100% of FLC for 1.0 SF motors.",
+          "actual": "Choose overload relay at 115–125% of FLC for 1.15 SF motors, or at 100% of FLC for 1.0 SF motors.",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "For VFD-driven motors, set VFD current limit at motor nameplate FLA; cable sized per NEC 430.6 / IEC.",
+          "actual": "For VFD-driven motors, set VFD current limit at motor nameplate FLA; cable sized per NEC 430.6 / IEC.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Direct FLC",
+          "actual": "Direct FLC",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I = P / (√3 · V_LL · PF · η)",
+          "actual": "I = P / (√3 · V_LL · PF · η)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "3φ; P in W",
+          "actual": "3φ; P in W",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "NEC OCPD",
+          "actual": "NEC OCPD",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "OCPD ≥ 2.5 × FLC (Design B)",
+          "actual": "OCPD ≥ 2.5 × FLC (Design B)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "NEC 430.52",
+          "actual": "NEC 430.52",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 33,
+      "failCount": 0
+    },
+    {
+      "calculator": "motor-starting",
+      "title": "Motor Starting Current & Methods",
+      "category": "motor",
+      "testName": "45A · LR×7 · DOL · 400V · 30MVA",
+      "input": {
+        "I": 45,
+        "lr": 7,
+        "method": "dol",
+        "autoPct": 65,
+        "V": 400,
+        "Ssc": 30
+      },
+      "checks": [
+        {
+          "field": "row:\"Locked-rotor current (DOL)\".value",
+          "expected": 315,
+          "actual": 315,
+          "pass": true
+        },
+        {
+          "field": "row:\"Locked-rotor current (DOL)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Locked-rotor current (DOL)\".status",
+          "expected": "warn",
+          "actual": "warn",
+          "pass": true
+        },
+        {
+          "field": "row:\"Starting current (method)\".value",
+          "expected": 315,
+          "actual": 315,
+          "pass": true
+        },
+        {
+          "field": "row:\"Starting current (method)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Starting current (method)\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Method factor k\".value",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "row:\"Voltage dip on source\".value",
+          "expected": 0.2,
+          "actual": 0.2,
+          "pass": true
+        },
+        {
+          "field": "row:\"Voltage dip on source\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "row:\"Mechanical stress level\".value",
+          "expected": "High",
+          "actual": "High",
+          "pass": true
+        },
+        {
+          "field": "row:\"Mechanical stress level\".unit",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "I_start = 315 A (DOL) · ΔU ≈ 0.2%",
+          "actual": "I_start = 315 A (DOL) · ΔU ≈ 0.2%",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60034-12",
+          "actual": "IEC 60034-12",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Starting performance of cage induction motors — Design N (normal) and NY (high torque).",
+          "actual": "Starting performance of cage induction motors — Design N (normal) and NY (high torque).",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "NEMA",
+          "actual": "NEMA",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "NEMA MG-1 Part 12",
+          "actual": "NEMA MG-1 Part 12",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Locked-rotor current codes A–J; Design B typical LR = 6–7 × FLC.",
+          "actual": "Locked-rotor current codes A–J; Design B typical LR = 6–7 × FLC.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Star-delta: 6 lead motor required; transitions cause 2nd inrush peak.",
+          "actual": "Star-delta: 6 lead motor required; transitions cause 2nd inrush peak.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "VFD eliminates inrush entirely and provides soft ramp & controlled decel.",
+          "actual": "VFD eliminates inrush entirely and provides soft ramp & controlled decel.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Locked-rotor current",
+          "actual": "Locked-rotor current",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I_LR = LR × FLC",
+          "actual": "I_LR = LR × FLC",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "LR typical 6–8",
+          "actual": "LR typical 6–8",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Star-delta start",
+          "actual": "Star-delta start",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "I_start = I_LR / 3",
+          "actual": "I_start = I_LR / 3",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Autotransformer",
+          "actual": "Autotransformer",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "I_start = k² · I_LR",
+          "actual": "I_start = k² · I_LR",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "k = tap ratio",
+          "actual": "k = tap ratio",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "Voltage dip",
+          "actual": "Voltage dip",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "ΔU ≈ I_start / I_sc",
+          "actual": "ΔU ≈ I_start / I_sc",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "I_sc = S_sc / (√3·V)",
+          "actual": "I_sc = S_sc / (√3·V)",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 37,
+      "failCount": 0
+    },
+    {
+      "calculator": "vfd-sizing",
+      "title": "VFD (Variable Frequency Drive) Sizing",
+      "category": "motor",
+      "testName": "45A · 400V · CT · 45°C · 1500m · 6kHz",
+      "input": {
+        "I": 45,
+        "V": 400,
+        "ph": "3",
+        "duty": "CT",
+        "Ta": 45,
+        "alt": 1500,
+        "fc": 6
+      },
+      "checks": [
+        {
+          "field": "row:\"Motor FLC\".value",
+          "expected": 45,
+          "actual": 45,
+          "pass": true
+        },
+        {
+          "field": "row:\"Motor FLC\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Duty factor (k_d)\".value",
+          "expected": 1.05,
+          "actual": 1.05,
+          "pass": true
+        },
+        {
+          "field": "row:\"Temp derate (k_T)\".value",
+          "expected": 0.9,
+          "actual": 0.9,
+          "pass": true
+        },
+        {
+          "field": "row:\"Altitude derate (k_A)\".value",
+          "expected": 0.95,
+          "actual": 0.95,
+          "pass": true
+        },
+        {
+          "field": "row:\"Carrier derate (k_F)\".value",
+          "expected": 0.95,
+          "actual": 0.95,
+          "pass": true
+        },
+        {
+          "field": "row:\"Worst derate\".value",
+          "expected": 0.9,
+          "actual": 0.9,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required VFD current\".value",
+          "expected": 50,
+          "actual": 50,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required VFD current\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Required VFD power\".value",
+          "expected": 34.64,
+          "actual": 34.64,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required VFD power\".unit",
+          "expected": "kVA",
+          "actual": "kVA",
+          "pass": true
+        },
+        {
+          "field": "row:\"Required VFD power\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "VFD ≥ 50 A (34.64 kVA) at derate 90%",
+          "actual": "VFD ≥ 50 A (34.64 kVA) at derate 90%",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 61800-2",
+          "actual": "IEC 61800-2",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Adjustable speed electrical power drive systems — general requirements. Includes derating guidance.",
+          "actual": "Adjustable speed electrical power drive systems — general requirements. Includes derating guidance.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "NEMA",
+          "actual": "NEMA",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "NEMA ICS 7",
+          "actual": "NEMA ICS 7",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Industrial control and systems — adjustable-speed drives.",
+          "actual": "Industrial control and systems — adjustable-speed drives.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Select VFD nominal ≥ 50 A continuous, 75 A peak (60 s).",
+          "actual": "Select VFD nominal ≥ 50 A continuous, 75 A peak (60 s).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Use inverter-duty cable or output reactor/reactor filter for long motor leads (>30 m) to limit dv/dt and reflected wave.",
+          "actual": "Use inverter-duty cable or output reactor/reactor filter for long motor leads (>30 m) to limit dv/dt and reflected wave.",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "Install line reactor or passive harmonic filter at VFD input for THDi mitigation.",
+          "actual": "Install line reactor or passive harmonic filter at VFD input for THDi mitigation.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Required current",
+          "actual": "Required current",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I_req = I_FLC / (k_d · k_T · k_A · k_F)",
+          "actual": "I_req = I_FLC / (k_d · k_T · k_A · k_F)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Temp derate",
+          "actual": "Temp derate",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "k_T = 1 − 0.02·(T_a − 40)",
+          "actual": "k_T = 1 − 0.02·(T_a − 40)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "°C above 40",
+          "actual": "°C above 40",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Altitude derate",
+          "actual": "Altitude derate",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "k_A = 1 − 0.01·((alt − 1000)/100)",
+          "actual": "k_A = 1 − 0.01·((alt − 1000)/100)",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "per 100 m above 1000 m",
+          "actual": "per 100 m above 1000 m",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 36,
+      "failCount": 0
+    },
+    {
+      "calculator": "motor-breaker",
+      "title": "Motor Circuit Breaker / OCPD Sizing",
+      "category": "motor",
+      "testName": "45A · inverse-time · 3P",
+      "input": {
+        "I": 45,
+        "type": "inv",
+        "poles": "3"
+      },
+      "checks": [
+        {
+          "field": "row:\"Motor FLC\".value",
+          "expected": 45,
+          "actual": 45,
+          "pass": true
+        },
+        {
+          "field": "row:\"Motor FLC\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Protection factor (k)\".value",
+          "expected": 2.5,
+          "actual": 2.5,
+          "pass": true
+        },
+        {
+          "field": "row:\"Target OCPD\".value",
+          "expected": 112.5,
+          "actual": 112.5,
+          "pass": true
+        },
+        {
+          "field": "row:\"Target OCPD\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Selected OCPD (next std)\".value",
+          "expected": 125,
+          "actual": 125,
+          "pass": true
+        },
+        {
+          "field": "row:\"Selected OCPD (next std)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Selected OCPD (next std)\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Overload relay setting\".value",
+          "expected": "51.7 – 56.3",
+          "actual": "51.7 – 56.3",
+          "pass": true
+        },
+        {
+          "field": "row:\"Overload relay setting\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Overload relay setting\".status",
+          "expected": "info",
+          "actual": "info",
+          "pass": true
+        },
+        {
+          "field": "row:\"Min conductor ampacity\".value",
+          "expected": 56.3,
+          "actual": 56.3,
+          "pass": true
+        },
+        {
+          "field": "row:\"Min conductor ampacity\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "picks.breakerRating",
+          "expected": 125,
+          "actual": 125,
+          "pass": true
+        },
+        {
+          "field": "picks.breakerFrame",
+          "expected": 125,
+          "actual": 125,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "OCPD 125 A · OL 51.7–56.3 A · cable ≥ 56.3 A",
+          "actual": "OCPD 125 A · OL 51.7–56.3 A · cable ≥ 56.3 A",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "NEC 430.52",
+          "actual": "NEC 430.52",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Branch-circuit short-circuit & ground-fault protection: 250% (inverse-time), 800% (instantaneous), 175% (dual-element fuse). Next higher standard size allowed.",
+          "actual": "Branch-circuit short-circuit & ground-fault protection: 250% (inverse-time), 800% (instantaneous), 175% (dual-element fuse). Next higher standard size allowed.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 60947-4-1",
+          "actual": "IEC 60947-4-1",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Type 1 / Type 2 coordination. Type 2 = no welding, trip on SC.",
+          "actual": "Type 1 / Type 2 coordination. Type 2 = no welding, trip on SC.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Breaker: 125 A, 3-pole.",
+          "actual": "Breaker: 125 A, 3-pole.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Set overload to motor nameplate FLA (1.0 SF motor) or 115–125% × FLA (1.15 SF motor).",
+          "actual": "Set overload to motor nameplate FLA (1.0 SF motor) or 115–125% × FLA (1.15 SF motor).",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "Verify SC rating ≥ available fault current at line side.",
+          "actual": "Verify SC rating ≥ available fault current at line side.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "OCPD (inverse-time)",
+          "actual": "OCPD (inverse-time)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "OCPD ≥ 2.5 × FLC",
+          "actual": "OCPD ≥ 2.5 × FLC",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "NEC 430.52, Design B",
+          "actual": "NEC 430.52, Design B",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "OCPD (instantaneous)",
+          "actual": "OCPD (instantaneous)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "OCPD ≥ 8 × FLC",
+          "actual": "OCPD ≥ 8 × FLC",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Motor circuit protector",
+          "actual": "Motor circuit protector",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "OCPD (dual fuse)",
+          "actual": "OCPD (dual fuse)",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "OCPD ≥ 1.75 × FLC",
+          "actual": "OCPD ≥ 1.75 × FLC",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "Time-delay fuse",
+          "actual": "Time-delay fuse",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "Conductor",
+          "actual": "Conductor",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "A ≥ 1.25 × FLC",
+          "actual": "A ≥ 1.25 × FLC",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "Continuous load",
+          "actual": "Continuous load",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 42,
+      "failCount": 0
+    },
+    {
+      "calculator": "voltage-drop",
+      "title": "Voltage Drop Calculator",
+      "category": "cable",
+      "testName": "400V · 3φ · 80A · 60m · 16mm² Cu · 60°C",
+      "input": {
+        "V": 400,
+        "ph": "3",
+        "I": 80,
+        "L": 60,
+        "mat": "Cu",
+        "size": 16,
+        "pf": 0.9,
+        "T": 60
+      },
+      "checks": [
+        {
+          "field": "row:\"Voltage drop ΔU\".value",
+          "expected": 9.62,
+          "actual": 9.62,
+          "pass": true
+        },
+        {
+          "field": "row:\"Voltage drop ΔU\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "row:\"Voltage drop\".value",
+          "expected": 2.41,
+          "actual": 2.41,
+          "pass": true
+        },
+        {
+          "field": "row:\"Voltage drop\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "row:\"Resistance R_ph\".value",
+          "expected": 0.075,
+          "actual": 0.075,
+          "pass": true
+        },
+        {
+          "field": "row:\"Resistance R_ph\".unit",
+          "expected": "Ω",
+          "actual": "Ω",
+          "pass": true
+        },
+        {
+          "field": "row:\"Reactance X_ph\".value",
+          "expected": 0.005,
+          "actual": 0.005,
+          "pass": true
+        },
+        {
+          "field": "row:\"Reactance X_ph\".unit",
+          "expected": "Ω",
+          "actual": "Ω",
+          "pass": true
+        },
+        {
+          "field": "row:\"Voltage at load\".value",
+          "expected": 390.38,
+          "actual": 390.4,
+          "pass": true
+        },
+        {
+          "field": "row:\"Voltage at load\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended size for ≤ 3% Vd\".value",
+          "expected": 16,
+          "actual": 16,
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended size for ≤ 3% Vd\".unit",
+          "expected": "mm²",
+          "actual": "mm²",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended OCPD (125% I)\".value",
+          "expected": 100,
+          "actual": 100,
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended OCPD (125% I)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "picks.cableSize",
+          "expected": 16,
+          "actual": 16,
+          "pass": true
+        },
+        {
+          "field": "picks.breakerRating",
+          "expected": 100,
+          "actual": 100,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "ΔU = 2.41% (9.6 V) · 16 mm² meets ≤ 3% target",
+          "actual": "ΔU = 2.41% (9.6 V) · 16 mm² meets ≤ 3% target",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "NEC 210.19 / 215.2",
+          "actual": "NEC 210.19 / 215.2",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Branch circuit / feeder Vd ≤ 3% for furthest outlet; total ≤ 5% (NEC informational note).",
+          "actual": "Branch circuit / feeder Vd ≤ 3% for furthest outlet; total ≤ 5% (NEC informational note).",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 60364-5-52",
+          "actual": "IEC 60364-5-52",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Annex G provides Vd calculation method including temperature correction.",
+          "actual": "Annex G provides Vd calculation method including temperature correction.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Vd% ≤ 3% — within typical branch-circuit target.",
+          "actual": "Vd% ≤ 3% — within typical branch-circuit target.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Verify cable ampacity separately (use cable-sizing calculator) — voltage drop and ampacity are independent checks.",
+          "actual": "Verify cable ampacity separately (use cable-sizing calculator) — voltage drop and ampacity are independent checks.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Voltage drop",
+          "actual": "Voltage drop",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "ΔU = k·I·(R·cos φ + X·sin φ)",
+          "actual": "ΔU = k·I·(R·cos φ + X·sin φ)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "k = 2 (1φ), √3 (3φ)",
+          "actual": "k = 2 (1φ), √3 (3φ)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Operating R",
+          "actual": "Operating R",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "R_T = R₂₀·(1 + α·(T − 20))",
+          "actual": "R_T = R₂₀·(1 + α·(T − 20))",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "α = 0.00393 (Cu) / 0.00403 (Al)",
+          "actual": "α = 0.00393 (Cu) / 0.00403 (Al)",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Vd %",
+          "actual": "Vd %",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "Vd% = ΔU / V_nom · 100",
+          "actual": "Vd% = ΔU / V_nom · 100",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "3% branch / 5% total",
+          "actual": "3% branch / 5% total",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=4",
+          "actual": 4,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 39,
+      "failCount": 0
+    },
+    {
+      "calculator": "cable-sizing",
+      "title": "Cable Sizing Calculator",
+      "category": "cable",
+      "testName": "100A · XLPE · C · Cu · 35°C · 2 circuits",
+      "input": {
+        "IB": 100,
+        "ins": "XLPE",
+        "method": "C",
+        "mat": "Cu",
+        "Ta": 35,
+        "grp": 2,
+        "soil": 1.2,
+        "duty": "cont"
+      },
+      "checks": [
+        {
+          "field": "row:\"Design current I_B\".value",
+          "expected": 100,
+          "actual": 100,
+          "pass": true
+        },
+        {
+          "field": "row:\"Design current I_B\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Continuous-load factor k₁\".value",
+          "expected": 1.25,
+          "actual": 1.25,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required I_n\".value",
+          "expected": 125,
+          "actual": 125,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required I_n\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Temperature factor k_T\".value",
+          "expected": 0.96,
+          "actual": 0.96,
+          "pass": true
+        },
+        {
+          "field": "row:\"Grouping factor k_G\".value",
+          "expected": 0.88,
+          "actual": 0.88,
+          "pass": true
+        },
+        {
+          "field": "row:\"Soil derate k_S\".value",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required I_z (ampacity)\".value",
+          "expected": 147.96,
+          "actual": 148,
+          "pass": true
+        },
+        {
+          "field": "row:\"Required I_z (ampacity)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Selected size\".value",
+          "expected": 35,
+          "actual": 35,
+          "pass": true
+        },
+        {
+          "field": "row:\"Selected size\".unit",
+          "expected": "mm²",
+          "actual": "mm²",
+          "pass": true
+        },
+        {
+          "field": "row:\"Selected size\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Cable ampacity (I_z)\".value",
+          "expected": 168,
+          "actual": 168,
+          "pass": true
+        },
+        {
+          "field": "row:\"Cable ampacity (I_z)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Cable ampacity (I_z)\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended OCPD (next std)\".value",
+          "expected": 125,
+          "actual": 125,
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended OCPD (next std)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "picks.cableSize",
+          "expected": 35,
+          "actual": 35,
+          "pass": true
+        },
+        {
+          "field": "picks.breakerRating",
+          "expected": 125,
+          "actual": 125,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Select 35 mm² Cu (XLPE, method C) · OCPD 125 A",
+          "actual": "Select 35 mm² Cu (XLPE, method C) · OCPD 125 A",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60364-5-52",
+          "actual": "IEC 60364-5-52",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Tables B.52.2 to B.52.14 give ampacity for installation methods A1–F. Apply derating factors B.52.14 (temperature), B.52.17 (grouping), B.52.16 (soil).",
+          "actual": "Tables B.52.2 to B.52.14 give ampacity for installation methods A1–F. Apply derating factors B.52.14 (temperature), B.52.17 (grouping), B.52.16 (soil).",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "NEC 310.15(B)(16)",
+          "actual": "NEC 310.15(B)(16)",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Allowable ampacity for 60/75/90 °C conductors. Apply adjustment & correction factors per 310.15(B)(3)(a).",
+          "actual": "Allowable ampacity for 60/75/90 °C conductors. Apply adjustment & correction factors per 310.15(B)(3)(a).",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Voltage drop must be checked separately (use Voltage Drop calculator).",
+          "actual": "Voltage drop must be checked separately (use Voltage Drop calculator).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Verify short-circuit withstand: I²t cable ≥ I²t breaker clearing.",
+          "actual": "Verify short-circuit withstand: I²t cable ≥ I²t breaker clearing.",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "For long parallel runs, consider derating per ambient/burial depth per IEEE 835 / IEC 60287.",
+          "actual": "For long parallel runs, consider derating per ambient/burial depth per IEEE 835 / IEC 60287.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Required ampacity",
+          "actual": "Required ampacity",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I_z ≥ k₁ · I_B / (k_T · k_G · k_S)",
+          "actual": "I_z ≥ k₁ · I_B / (k_T · k_G · k_S)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "IEC 60364-5-52",
+          "actual": "IEC 60364-5-52",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Temperature",
+          "actual": "Temperature",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "k_T (B.52.14)",
+          "actual": "k_T (B.52.14)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "From insulation & ambient",
+          "actual": "From insulation & ambient",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Grouping",
+          "actual": "Grouping",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "k_G (B.52.17)",
+          "actual": "k_G (B.52.17)",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "Number of circuits",
+          "actual": "Number of circuits",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "Continuous load",
+          "actual": "Continuous load",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "k₁ = 1.25",
+          "actual": "k₁ = 1.25",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "NEC 210.20 / 215.3",
+          "actual": "NEC 210.20 / 215.3",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 47,
+      "failCount": 0
+    },
+    {
+      "calculator": "cable-derating",
+      "title": "Cable Derating Factors Calculator",
+      "category": "cable",
+      "testName": "35mm² PVC · C · 45°C · 3 circuits · soil 1.5",
+      "input": {
+        "size": 35,
+        "ins": "PVC",
+        "method": "C",
+        "Ta": 45,
+        "grp": 3,
+        "soil": 1.5
+      },
+      "checks": [
+        {
+          "field": "row:\"Temperature factor k_T\".value",
+          "expected": 0.79,
+          "actual": 0.79,
+          "pass": true
+        },
+        {
+          "field": "row:\"Grouping factor k_G\".value",
+          "expected": 0.82,
+          "actual": 0.82,
+          "pass": true
+        },
+        {
+          "field": "row:\"Soil factor k_S\".value",
+          "expected": 0.93,
+          "actual": 0.93,
+          "pass": true
+        },
+        {
+          "field": "row:\"Combined derate K\".value",
+          "expected": 0.602,
+          "actual": 0.602,
+          "pass": true
+        },
+        {
+          "field": "row:\"Base ampacity I_z,table\".value",
+          "expected": 148,
+          "actual": 148,
+          "pass": true
+        },
+        {
+          "field": "row:\"Base ampacity I_z,table\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Final ampacity I_z'\".value",
+          "expected": 89.1,
+          "actual": 89.2,
+          "pass": true
+        },
+        {
+          "field": "row:\"Final ampacity I_z'\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Final ampacity I_z'\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "warn",
+          "actual": "warn",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "K = 0.602 · I_z' = 89.2 A (from 148 A table)",
+          "actual": "K = 0.602 · I_z' = 89.2 A (from 148 A table)",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60364-5-52 §523",
+          "actual": "IEC 60364-5-52 §523",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Apply derating factors where installation conditions differ from the reference method.",
+          "actual": "Apply derating factors where installation conditions differ from the reference method.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Combined derate",
+          "actual": "Combined derate",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "K = k_T · k_G · k_S",
+          "actual": "K = k_T · k_G · k_S",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Final ampacity",
+          "actual": "Final ampacity",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "I_z' = I_z,table · K",
+          "actual": "I_z' = I_z,table · K",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 24,
+      "failCount": 0
+    },
+    {
+      "calculator": "short-circuit",
+      "title": "Short-Circuit Current (I²t) Withstand",
+      "category": "cable",
+      "testName": "25kA · 35mm² Cu/XLPE · 0.3s · device I²t=200M (FAIL)",
+      "input": {
+        "Isc": 25000,
+        "S": 35,
+        "mat": "Cu",
+        "ins": "XLPE",
+        "t": 0.3,
+        "I2t_dev": 200000000
+      },
+      "checks": [
+        {
+          "field": "row:\"Material constant k\".value",
+          "expected": 143,
+          "actual": 143,
+          "pass": true
+        },
+        {
+          "field": "row:\"Cable I²t withstand (k²·S²)\".value",
+          "expected": 25.05,
+          "actual": 25.05,
+          "pass": true
+        },
+        {
+          "field": "row:\"Cable I²t withstand (k²·S²)\".unit",
+          "expected": "kA²s",
+          "actual": "kA²s",
+          "pass": true
+        },
+        {
+          "field": "row:\"Cable I²t withstand (k²·S²)\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Source I²t\".value",
+          "expected": 187.5,
+          "actual": 187.5,
+          "pass": true
+        },
+        {
+          "field": "row:\"Source I²t\".unit",
+          "expected": "kA²s",
+          "actual": "kA²s",
+          "pass": true
+        },
+        {
+          "field": "row:\"Device I²t (given)\".value",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "field": "row:\"Device I²t (given)\".unit",
+          "expected": "kA²s",
+          "actual": "kA²s",
+          "pass": true
+        },
+        {
+          "field": "row:\"Verdict\".value",
+          "expected": "FAIL · cable will be damaged",
+          "actual": "FAIL · cable will be damaged",
+          "pass": true
+        },
+        {
+          "field": "row:\"Verdict\".unit",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "row:\"Verdict\".status",
+          "expected": "err",
+          "actual": "err",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "err",
+          "actual": "err",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Cable I²t = 25.05 kA²s vs 200 kA²s device",
+          "actual": "Cable I²t = 25.05 kA²s vs 200 kA²s device",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60364-4-43 §433",
+          "actual": "IEC 60364-4-43 §433",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Adiabatic equation: S ≥ I·√t / k. k depends on conductor material, insulation, and initial/final temperature.",
+          "actual": "Adiabatic equation: S ≥ I·√t / k. k depends on conductor material, insulation, and initial/final temperature.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "NEC 110.10",
+          "actual": "NEC 110.10",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Circuit impedance and other characteristics shall be selected so that the overcurrent device will clear a fault before damage occurs.",
+          "actual": "Circuit impedance and other characteristics shall be selected so that the overcurrent device will clear a fault before damage occurs.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Cable undersized for SC — increase cross-section or reduce clearing time (use current-limiting fuse/breaker).",
+          "actual": "Cable undersized for SC — increase cross-section or reduce clearing time (use current-limiting fuse/breaker).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Always cross-check with the actual protective device let-through curve.",
+          "actual": "Always cross-check with the actual protective device let-through curve.",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "For long cable runs, source impedance reduces I_sc at the fault — compute I_sc at the far end.",
+          "actual": "For long cable runs, source impedance reduces I_sc at the fault — compute I_sc at the far end.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Adiabatic withstand",
+          "actual": "Adiabatic withstand",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I²t ≤ k² · S²",
+          "actual": "I²t ≤ k² · S²",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "k = 115 (PVC/Cu), 143 (XLPE/Cu)",
+          "actual": "k = 115 (PVC/Cu), 143 (XLPE/Cu)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Source I²t",
+          "actual": "Source I²t",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "I²t = I_sc² · t",
+          "actual": "I²t = I_sc² · t",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "t = clearing time",
+          "actual": "t = clearing time",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 32,
+      "failCount": 0
+    },
+    {
+      "calculator": "breaker-sizing",
+      "title": "Circuit Breaker Sizing",
+      "category": "protection",
+      "testName": "120A cont + 30A non · LV",
+      "input": {
+        "Icont": 120,
+        "Inon": 30,
+        "system": "LV"
+      },
+      "checks": [
+        {
+          "field": "row:\"Continuous load\".value",
+          "expected": 120,
+          "actual": 120,
+          "pass": true
+        },
+        {
+          "field": "row:\"Continuous load\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Non-continuous load\".value",
+          "expected": 30,
+          "actual": 30,
+          "pass": true
+        },
+        {
+          "field": "row:\"Non-continuous load\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Total (NEC 80% rule)\".value",
+          "expected": 180,
+          "actual": 180,
+          "pass": true
+        },
+        {
+          "field": "row:\"Total (NEC 80% rule)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"OCPD (next std)\".value",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "field": "row:\"OCPD (next std)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"OCPD (next std)\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"Loading\".value",
+          "expected": 90,
+          "actual": 90,
+          "pass": true
+        },
+        {
+          "field": "row:\"Loading\".unit",
+          "expected": "%",
+          "actual": "%",
+          "pass": true
+        },
+        {
+          "field": "picks.breakerRating",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "field": "picks.breakerFrame",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Breaker 200 A · 90% loaded",
+          "actual": "Breaker 200 A · 90% loaded",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "NEC 210.20",
+          "actual": "NEC 210.20",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "OCPD rating ≥ noncontinuous + 125% continuous load.",
+          "actual": "OCPD rating ≥ noncontinuous + 125% continuous load.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 60898 / 60947-2",
+          "actual": "IEC 60898 / 60947-2",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Circuit-breakers for overcurrent protection. Tripping characteristics B/C/D/K.",
+          "actual": "Circuit-breakers for overcurrent protection. Tripping characteristics B/C/D/K.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Verify SC rating ≥ available fault current at point of installation.",
+          "actual": "Verify SC rating ≥ available fault current at point of installation.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "For motor loads, use inverse-time OCPD per NEC 430.52 (typically 250% of FLC).",
+          "actual": "For motor loads, use inverse-time OCPD per NEC 430.52 (typically 250% of FLC).",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "OCPD",
+          "actual": "OCPD",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I_OCPD ≥ 1.25·Icont + Inon",
+          "actual": "I_OCPD ≥ 1.25·Icont + Inon",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "NEC 210.20 / 215.3",
+          "actual": "NEC 210.20 / 215.3",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Next standard",
+          "actual": "Next standard",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "next ≥ target",
+          "actual": "next ≥ target",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Standard sizes",
+          "actual": "Standard sizes",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 33,
+      "failCount": 0
+    },
+    {
+      "calculator": "fuse-sizing",
+      "title": "Fuse Sizing Calculator",
+      "category": "protection",
+      "testName": "40A cont + 15A non · fast-acting",
+      "input": {
+        "Icont": 40,
+        "Inon": 15,
+        "type": "FA",
+        "inrush": 5
+      },
+      "checks": [
+        {
+          "field": "row:\"Continuous load\".value",
+          "expected": 40,
+          "actual": 40,
+          "pass": true
+        },
+        {
+          "field": "row:\"Continuous load\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Non-continuous\".value",
+          "expected": 15,
+          "actual": 15,
+          "pass": true
+        },
+        {
+          "field": "row:\"Non-continuous\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Multiplier (1.25 / 1.15)\".value",
+          "expected": 1.25,
+          "actual": 1.25,
+          "pass": true
+        },
+        {
+          "field": "row:\"Computed minimum\".value",
+          "expected": 65,
+          "actual": 65,
+          "pass": true
+        },
+        {
+          "field": "row:\"Computed minimum\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended fuse\".value",
+          "expected": 70,
+          "actual": 70,
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended fuse\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended fuse\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Recommend 70 A fast-acting",
+          "actual": "Recommend 70 A fast-acting",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60269-1/2",
+          "actual": "IEC 60269-1/2",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Low-voltage fuses — gG (general purpose), aM (motor), gR/aR (semiconductor).",
+          "actual": "Low-voltage fuses — gG (general purpose), aM (motor), gR/aR (semiconductor).",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "NEC 240.4(B)",
+          "actual": "NEC 240.4(B)",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Conductor ampacity vs fuse rating — next higher standard size permitted for 800 A and below.",
+          "actual": "Conductor ampacity vs fuse rating — next higher standard size permitted for 800 A and below.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Select fuse class to match available fuseholders (CC, J, T, L).",
+          "actual": "Select fuse class to match available fuseholders (CC, J, T, L).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "For DC circuits, select DC-rated fuse (different arcing behavior).",
+          "actual": "For DC circuits, select DC-rated fuse (different arcing behavior).",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "Time-delay fuses (dual-element) tolerate motor inrush; fast-acting fuses protect semiconductors.",
+          "actual": "Time-delay fuses (dual-element) tolerate motor inrush; fast-acting fuses protect semiconductors.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Fast-acting",
+          "actual": "Fast-acting",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "I_F ≥ 1.25·Icont + Inon",
+          "actual": "I_F ≥ 1.25·Icont + Inon",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "NEC 240.4(B) / 430.52",
+          "actual": "NEC 240.4(B) / 430.52",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Time-delay",
+          "actual": "Time-delay",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "I_F ≥ 1.15·Icont + Inon",
+          "actual": "I_F ≥ 1.15·Icont + Inon",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Allows harmless inrush",
+          "actual": "Allows harmless inrush",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Motor (aM)",
+          "actual": "Motor (aM)",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "I_F ≥ Icont + inrush, sized for locked rotor",
+          "actual": "I_F ≥ Icont + inrush, sized for locked rotor",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "IEC 60269 aM",
+          "actual": "IEC 60269 aM",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 34,
+      "failCount": 0
+    },
+    {
+      "calculator": "earthing-conductor",
+      "title": "Earthing Conductor Sizing",
+      "category": "grounding",
+      "testName": "6000A · 0.3s · Cu/XLPE",
+      "input": {
+        "Isc": 6000,
+        "t": 0.3,
+        "mat": "Cu",
+        "ins": "XLPE"
+      },
+      "checks": [
+        {
+          "field": "row:\"Earth-fault current I\".value",
+          "expected": 6000,
+          "actual": 6000,
+          "pass": true
+        },
+        {
+          "field": "row:\"Earth-fault current I\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Disconnect time t\".value",
+          "expected": 0.3,
+          "actual": 0.3,
+          "pass": true
+        },
+        {
+          "field": "row:\"Disconnect time t\".unit",
+          "expected": "s",
+          "actual": "s",
+          "pass": true
+        },
+        {
+          "field": "row:\"k coefficient\".value",
+          "expected": 143,
+          "actual": 143,
+          "pass": true
+        },
+        {
+          "field": "row:\"Computed S (adiabatic)\".value",
+          "expected": 22.98,
+          "actual": 22.98,
+          "pass": true
+        },
+        {
+          "field": "row:\"Computed S (adiabatic)\".unit",
+          "expected": "mm²",
+          "actual": "mm²",
+          "pass": true
+        },
+        {
+          "field": "row:\"Next standard size\".value",
+          "expected": 25,
+          "actual": 25,
+          "pass": true
+        },
+        {
+          "field": "row:\"Next standard size\".unit",
+          "expected": "mm²",
+          "actual": "mm²",
+          "pass": true
+        },
+        {
+          "field": "row:\"Next standard size\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "picks.cableSize",
+          "expected": 25,
+          "actual": 25,
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "PE conductor ≥ 25 mm² Cu",
+          "actual": "PE conductor ≥ 25 mm² Cu",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 60364-5-54 §543.1",
+          "actual": "IEC 60364-5-54 §543.1",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "PE conductor must withstand adiabatic I²t for the disconnect time. Minimum 2.5 mm² if mechanically protected, 4 mm² if not.",
+          "actual": "PE conductor must withstand adiabatic I²t for the disconnect time. Minimum 2.5 mm² if mechanically protected, 4 mm² if not.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEEE 80 (substation) ",
+          "actual": "IEEE 80 (substation) ",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Step & touch potentials for substations — separate from PE sizing.",
+          "actual": "Step & touch potentials for substations — separate from PE sizing.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Verify PE conductor is copper or aluminum — steel earth electrodes have higher resistance.",
+          "actual": "Verify PE conductor is copper or aluminum — steel earth electrodes have higher resistance.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "For TN systems, PE sized equal to phase conductor up to 16 mm²; 16 mm² for larger phase sizes per 543.1.2.",
+          "actual": "For TN systems, PE sized equal to phase conductor up to 16 mm²; 16 mm² for larger phase sizes per 543.1.2.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Adiabatic S",
+          "actual": "Adiabatic S",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "S = I · √t / k",
+          "actual": "S = I · √t / k",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "k = 115 (Cu/PVC) or 143 (Cu/XLPE)",
+          "actual": "k = 115 (Cu/PVC) or 143 (Cu/XLPE)",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 28,
+      "failCount": 0
+    },
+    {
+      "calculator": "ground-resistance",
+      "title": "Ground Electrode Resistance Estimator",
+      "category": "grounding",
+      "testName": "Single rod · ρ=50 · L=3m",
+      "input": {
+        "type": "rod",
+        "rho": 50,
+        "L": 3,
+        "d": 0.02,
+        "W": 0.6,
+        "A": 1,
+        "n": 1,
+        "s": 3
+      },
+      "checks": [
+        {
+          "field": "row:\"Single electrode R\".value",
+          "expected": 16.97,
+          "actual": 16.97,
+          "pass": true
+        },
+        {
+          "field": "row:\"Single electrode R\".unit",
+          "expected": "Ω",
+          "actual": "Ω",
+          "pass": true
+        },
+        {
+          "field": "row:\"Multi-rod R\".value",
+          "expected": 16.97,
+          "actual": 16.97,
+          "pass": true
+        },
+        {
+          "field": "row:\"Multi-rod R\".unit",
+          "expected": "Ω",
+          "actual": "Ω",
+          "pass": true
+        },
+        {
+          "field": "row:\"Soil ρ\".value",
+          "expected": 50,
+          "actual": 50,
+          "pass": true
+        },
+        {
+          "field": "row:\"Soil ρ\".unit",
+          "expected": "Ω·m",
+          "actual": "Ω·m",
+          "pass": true
+        },
+        {
+          "field": "row:\"Length L\".value",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "row:\"Length L\".unit",
+          "expected": "m",
+          "actual": "m",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "info",
+          "actual": "info",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "R ≈ 17 Ω with 1 rod(s)",
+          "actual": "R ≈ 17 Ω with 1 rod(s)",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE 80 §11",
+          "actual": "IEEE 80 §11",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Detailed formulas for substation ground grid design. Includes surface layer materials for step/touch potentials.",
+          "actual": "Detailed formulas for substation ground grid design. Includes surface layer materials for step/touch potentials.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 62561-1",
+          "actual": "IEC 62561-1",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Lightning protection system components — earth electrodes.",
+          "actual": "Lightning protection system components — earth electrodes.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "R > 10 Ω — typical limit for commercial/industrial. Add more rods, longer rods, or soil treatment (e.g., bentonite).",
+          "actual": "R > 10 Ω — typical limit for commercial/industrial. Add more rods, longer rods, or soil treatment (e.g., bentonite).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Always measure R after installation — calculated values are estimates.",
+          "actual": "Always measure R after installation — calculated values are estimates.",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "Seasonal variation can be 2–4× — design for worst-case dry soil conditions.",
+          "actual": "Seasonal variation can be 2–4× — design for worst-case dry soil conditions.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Vertical rod",
+          "actual": "Vertical rod",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "R = ρ/(2πL) · ln(4L/d)",
+          "actual": "R = ρ/(2πL) · ln(4L/d)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Multiple rods",
+          "actual": "Multiple rods",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "R_n ≈ R / n · (1 + ρ/(π·s·R))",
+          "actual": "R_n ≈ R / n · (1 + ρ/(π·s·R))",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Mutual coupling correction",
+          "actual": "Mutual coupling correction",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "Horizontal bed",
+          "actual": "Horizontal bed",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "Schwarz formula",
+          "actual": "Schwarz formula",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "See IEEE 80",
+          "actual": "See IEEE 80",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 32,
+      "failCount": 0
+    },
+    {
+      "calculator": "solar-inverter",
+      "title": "Solar Inverter Sizing",
+      "category": "renewable",
+      "testName": "12kWp · DC/AC 1.15",
+      "input": {
+        "Pdc": 12,
+        "ratio": 1.15,
+        "Vmp": 200,
+        "Voc": 600,
+        "ph": "1"
+      },
+      "checks": [
+        {
+          "field": "row:\"PV DC power\".value",
+          "expected": 12,
+          "actual": 12,
+          "pass": true
+        },
+        {
+          "field": "row:\"PV DC power\".unit",
+          "expected": "kWp",
+          "actual": "kWp",
+          "pass": true
+        },
+        {
+          "field": "row:\"DC/AC ratio\".value",
+          "expected": 1.15,
+          "actual": 1.15,
+          "pass": true
+        },
+        {
+          "field": "row:\"Inverter AC\".value",
+          "expected": 10.43,
+          "actual": 10.43,
+          "pass": true
+        },
+        {
+          "field": "row:\"Inverter AC\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Inverter AC\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "row:\"MPPT V range\".value",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "field": "row:\"MPPT V range\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "row:\"Max Voc\".value",
+          "expected": 600,
+          "actual": 600,
+          "pass": true
+        },
+        {
+          "field": "row:\"Max Voc\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Inverter ≥ 10.43 kW (DC/AC = 1.15)",
+          "actual": "Inverter ≥ 10.43 kW (DC/AC = 1.15)",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE 1547-2018",
+          "actual": "IEEE 1547-2018",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Standard for interconnecting distributed resources with electric power systems.",
+          "actual": "Standard for interconnecting distributed resources with electric power systems.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 62109-1/2",
+          "actual": "IEC 62109-1/2",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Safety of power converters for use in photovoltaic power systems.",
+          "actual": "Safety of power converters for use in photovoltaic power systems.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Confirm inverter MPPT range covers string Vmp at min expected cell temperature.",
+          "actual": "Confirm inverter MPPT range covers string Vmp at min expected cell temperature.",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Confirm Voc (cold) ≤ inverter max DC input voltage (use −10 °C or site min).",
+          "actual": "Confirm Voc (cold) ≤ inverter max DC input voltage (use −10 °C or site min).",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "In high-irradiance regions, DC/AC > 1.2 is common to recover clipping losses at noon.",
+          "actual": "In high-irradiance regions, DC/AC > 1.2 is common to recover clipping losses at noon.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Inverter AC",
+          "actual": "Inverter AC",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "P_ac = P_dc / (DC/AC ratio)",
+          "actual": "P_ac = P_dc / (DC/AC ratio)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 28,
+      "failCount": 0
+    },
+    {
+      "calculator": "battery-runtime",
+      "title": "Battery Runtime Calculator",
+      "category": "renewable",
+      "testName": "10kWh · 1.5kW · 80% DoD · 90% eff",
+      "input": {
+        "E": 10,
+        "dod": 80,
+        "P": 1.5,
+        "eta": 90,
+        "age": 0
+      },
+      "checks": [
+        {
+          "field": "row:\"Usable energy\".value",
+          "expected": 8,
+          "actual": 8,
+          "pass": true
+        },
+        {
+          "field": "row:\"Usable energy\".unit",
+          "expected": "kWh",
+          "actual": "kWh",
+          "pass": true
+        },
+        {
+          "field": "row:\"Effective load\".value",
+          "expected": 1.667,
+          "actual": 1.667,
+          "pass": true
+        },
+        {
+          "field": "row:\"Effective load\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Runtime\".value",
+          "expected": 4.8,
+          "actual": 4.8,
+          "pass": true
+        },
+        {
+          "field": "row:\"Runtime\".unit",
+          "expected": "h",
+          "actual": "h",
+          "pass": true
+        },
+        {
+          "field": "row:\"Runtime\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "Runtime ≈ 4.8 h at 1.5 kW load",
+          "actual": "Runtime ≈ 4.8 h at 1.5 kW load",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEEE 1188-2005",
+          "actual": "IEEE 1188-2005",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Lead-acid battery sizing for standby applications. Allow 1.25× aging factor at end-of-life.",
+          "actual": "Lead-acid battery sizing for standby applications. Allow 1.25× aging factor at end-of-life.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEC 61427",
+          "actual": "IEC 61427",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Secondary cells for PV energy systems.",
+          "actual": "Secondary cells for PV energy systems.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Apply aging derate at end-of-life (typically 70–80% of nameplate).",
+          "actual": "Apply aging derate at end-of-life (typically 70–80% of nameplate).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "For UPS, design for ≥ 15 min runtime at full load.",
+          "actual": "For UPS, design for ≥ 15 min runtime at full load.",
+          "pass": true
+        },
+        {
+          "field": "recs[2]",
+          "expected": "LiFePO4 supports deeper DoD (90%) vs lead-acid (50%).",
+          "actual": "LiFePO4 supports deeper DoD (90%) vs lead-acid (50%).",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Usable energy",
+          "actual": "Usable energy",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "E_usable = E_nom · DoD · (1 − aging)",
+          "actual": "E_usable = E_nom · DoD · (1 − aging)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Runtime",
+          "actual": "Runtime",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "t = E_usable / (P_load / η)",
+          "actual": "t = E_usable / (P_load / η)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 28,
+      "failCount": 0
+    },
+    {
+      "calculator": "solar-string",
+      "title": "Solar String Sizing Calculator",
+      "category": "renewable",
+      "testName": "Vmp=41 · Voc=49 · -10°C to 70°C",
+      "input": {
+        "Vmp_mod": 41,
+        "Voc_mod": 49,
+        "Tc_min": -10,
+        "Tc_max": 70,
+        "Vmppt_min": 200,
+        "Vmppt_max": 800,
+        "Vinv_max": 1000
+      },
+      "checks": [
+        {
+          "field": "row:\"Vmp at hot cell (Tmax)\".value",
+          "expected": 34.54,
+          "actual": 34.54,
+          "pass": true
+        },
+        {
+          "field": "row:\"Vmp at hot cell (Tmax)\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "row:\"Voc at cold cell (Tmin)\".value",
+          "expected": 55,
+          "actual": 55,
+          "pass": true
+        },
+        {
+          "field": "row:\"Voc at cold cell (Tmin)\".unit",
+          "expected": "V",
+          "actual": "V",
+          "pass": true
+        },
+        {
+          "field": "row:\"Min modules (hot Vmp ≥ MPPT min)\".value",
+          "expected": 6,
+          "actual": 6,
+          "pass": true
+        },
+        {
+          "field": "row:\"Max modules (cold Voc ≤ inverter max)\".value",
+          "expected": 18,
+          "actual": 18,
+          "pass": true
+        },
+        {
+          "field": "row:\"Max modules (Vmp ≤ MPPT max)\".value",
+          "expected": 19,
+          "actual": 19,
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended range\".value",
+          "expected": "6 – 18",
+          "actual": "6 – 18",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended range\".unit",
+          "expected": "modules",
+          "actual": "modules",
+          "pass": true
+        },
+        {
+          "field": "row:\"Recommended range\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "String size 6–18 modules (6 typical)",
+          "actual": "String size 6–18 modules (6 typical)",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "IEC",
+          "actual": "IEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "IEC 62548",
+          "actual": "IEC 62548",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "PV array design requirements. Includes temperature coefficient for Voc and Vmp.",
+          "actual": "PV array design requirements. Includes temperature coefficient for Voc and Vmp.",
+          "pass": true
+        },
+        {
+          "field": "notes[1].standard",
+          "expected": "IEEE",
+          "actual": "IEEE",
+          "pass": true
+        },
+        {
+          "field": "notes[1].reference",
+          "expected": "IEEE 1547",
+          "actual": "IEEE 1547",
+          "pass": true
+        },
+        {
+          "field": "notes[1].text",
+          "expected": "Interconnection requirements — no string sizing per se, but inverter DC input limit applies.",
+          "actual": "Interconnection requirements — no string sizing per se, but inverter DC input limit applies.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "recs[0]",
+          "expected": "Validate Vmp > MPPT min under all expected operating conditions (low irradiance, cold weather).",
+          "actual": "Validate Vmp > MPPT min under all expected operating conditions (low irradiance, cold weather).",
+          "pass": true
+        },
+        {
+          "field": "recs[1]",
+          "expected": "Validate Voc (cold) < V_inverter_max to avoid over-voltage damage.",
+          "actual": "Validate Voc (cold) < V_inverter_max to avoid over-voltage damage.",
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "Vmp (hot)",
+          "actual": "Vmp (hot)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "Vmp_T = Vmp·(1 + β·(Tmax − 25))",
+          "actual": "Vmp_T = Vmp·(1 + β·(Tmax − 25))",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "β ≈ −0.0035/°C",
+          "actual": "β ≈ −0.0035/°C",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "Voc (cold)",
+          "actual": "Voc (cold)",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "Voc_T = Voc·(1 + β·(Tmin − 25))",
+          "actual": "Voc_T = Voc·(1 + β·(Tmin − 25))",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].name",
+          "expected": "N_min",
+          "actual": "N_min",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].expression",
+          "expected": "N_min = ⌈Vmppt_min / Vmp_hot⌉",
+          "actual": "N_min = ⌈Vmppt_min / Vmp_hot⌉",
+          "pass": true
+        },
+        {
+          "field": "formulas[2].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].name",
+          "expected": "N_max",
+          "actual": "N_max",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].expression",
+          "expected": "N_max = ⌊Vinv_max / Voc_cold⌋",
+          "actual": "N_max = ⌊Vinv_max / Voc_cold⌋",
+          "pass": true
+        },
+        {
+          "field": "formulas[3].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 36,
+      "failCount": 0
+    },
+    {
+      "calculator": "hp-kw-converter",
+      "title": "HP ↔ kW Converter",
+      "category": "conversion",
+      "testName": "10 HP → kW",
+      "input": {
+        "value": 10,
+        "from": "hp",
+        "to": "kW"
+      },
+      "checks": [
+        {
+          "field": "row:\"Input\".value",
+          "expected": 10,
+          "actual": 10,
+          "pass": true
+        },
+        {
+          "field": "row:\"Input\".unit",
+          "expected": "hp",
+          "actual": "hp",
+          "pass": true
+        },
+        {
+          "field": "row:\"Output\".value",
+          "expected": 7.457,
+          "actual": 7.457,
+          "pass": true
+        },
+        {
+          "field": "row:\"Output\".unit",
+          "expected": "kW",
+          "actual": "kW",
+          "pass": true
+        },
+        {
+          "field": "row:\"Output\".status",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "field": "status",
+          "expected": "(none)",
+          "actual": "(none)",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "10 hp = 7.457 kW",
+          "actual": "10 hp = 7.457 kW",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "HP → W",
+          "actual": "HP → W",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "W = HP · 745.7",
+          "actual": "W = HP · 745.7",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "Mechanical",
+          "actual": "Mechanical",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "PS → W",
+          "actual": "PS → W",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "W = PS · 735.5",
+          "actual": "W = PS · 735.5",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "Metric",
+          "actual": "Metric",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 17,
+      "failCount": 0
+    },
+    {
+      "calculator": "awg-mm2-converter",
+      "title": "AWG ↔ mm² Converter",
+      "category": "conversion",
+      "testName": "AWG 4 → mm²",
+      "input": {
+        "mode": "awgTomm2",
+        "value": 4
+      },
+      "checks": [
+        {
+          "field": "row:\"AWG / kcmil\".value",
+          "expected": "4",
+          "actual": "4",
+          "pass": true
+        },
+        {
+          "field": "row:\"AWG / kcmil\".unit",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "row:\"mm²\".value",
+          "expected": 21.1,
+          "actual": 21.1,
+          "pass": true
+        },
+        {
+          "field": "row:\"mm²\".unit",
+          "expected": "mm²",
+          "actual": "mm²",
+          "pass": true
+        },
+        {
+          "field": "row:\"Cu ampacity (60 °C, NEC 310.16)\".value",
+          "expected": 85,
+          "actual": 85,
+          "pass": true
+        },
+        {
+          "field": "row:\"Cu ampacity (60 °C, NEC 310.16)\".unit",
+          "expected": "A",
+          "actual": "A",
+          "pass": true
+        },
+        {
+          "field": "row:\"Cu ampacity (60 °C, NEC 310.16)\".status",
+          "expected": "info",
+          "actual": "info",
+          "pass": true
+        },
+        {
+          "field": "summary",
+          "expected": "21.1 mm² ≈ 4 AWG · 85 A @ 60 °C",
+          "actual": "21.1 mm² ≈ 4 AWG · 85 A @ 60 °C",
+          "pass": true
+        },
+        {
+          "field": "notes.count",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "field": "notes[0].standard",
+          "expected": "NEC",
+          "actual": "NEC",
+          "pass": true
+        },
+        {
+          "field": "notes[0].reference",
+          "expected": "NEC 310.16",
+          "actual": "NEC 310.16",
+          "pass": true
+        },
+        {
+          "field": "notes[0].text",
+          "expected": "Allowable ampacity for 60/75/90 °C conductors, copper & aluminum.",
+          "actual": "Allowable ampacity for 60/75/90 °C conductors, copper & aluminum.",
+          "pass": true
+        },
+        {
+          "field": "recommendations.count",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "field": "formulas.count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "formulas[0].name",
+          "expected": "AWG → mm²",
+          "actual": "AWG → mm²",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].expression",
+          "expected": "mm² ≈ 0.012668 · 92^((36−n)/19.5)",
+          "actual": "mm² ≈ 0.012668 · 92^((36−n)/19.5)",
+          "pass": true
+        },
+        {
+          "field": "formulas[0].variables",
+          "expected": "n = AWG number",
+          "actual": "n = AWG number",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].name",
+          "expected": "kcmil → mm²",
+          "actual": "kcmil → mm²",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].expression",
+          "expected": "mm² = kcmil / 1.9735",
+          "actual": "mm² = kcmil / 1.9735",
+          "pass": true
+        },
+        {
+          "field": "formulas[1].variables",
+          "expected": "",
+          "actual": "",
+          "pass": true
+        },
+        {
+          "field": "steps.count",
+          "expected": ">=0",
+          "actual": 0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "passCount": 21,
+      "failCount": 0
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://powersys.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://powersys.app/single-phase-power</loc></url>
+  <url><loc>https://powersys.app/three-phase-power</loc></url>
+  <url><loc>https://powersys.app/power-factor</loc></url>
+  <url><loc>https://powersys.app/pf-correction</loc></url>
+  <url><loc>https://powersys.app/kw-kva-hp</loc></url>
+  <url><loc>https://powersys.app/current-calculator</loc></url>
+  <url><loc>https://powersys.app/demand-load</loc></url>
+  <url><loc>https://powersys.app/delta-wye</loc></url>
+  <url><loc>https://powersys.app/balanced-load</loc></url>
+  <url><loc>https://powersys.app/transformer-sizing</loc></url>
+  <url><loc>https://powersys.app/transformer-current</loc></url>
+  <url><loc>https://powersys.app/transformer-efficiency</loc></url>
+  <url><loc>https://powersys.app/motor-fl-current</loc></url>
+  <url><loc>https://powersys.app/motor-starting</loc></url>
+  <url><loc>https://powersys.app/vfd-sizing</loc></url>
+  <url><loc>https://powersys.app/motor-breaker</loc></url>
+  <url><loc>https://powersys.app/voltage-drop</loc></url>
+  <url><loc>https://powersys.app/cable-sizing</loc></url>
+  <url><loc>https://powersys.app/cable-derating</loc></url>
+  <url><loc>https://powersys.app/short-circuit</loc></url>
+  <url><loc>https://powersys.app/breaker-sizing</loc></url>
+  <url><loc>https://powersys.app/fuse-sizing</loc></url>
+  <url><loc>https://powersys.app/earthing-conductor</loc></url>
+  <url><loc>https://powersys.app/ground-resistance</loc></url>
+  <url><loc>https://powersys.app/solar-inverter</loc></url>
+  <url><loc>https://powersys.app/battery-runtime</loc></url>
+  <url><loc>https://powersys.app/solar-string</loc></url>
+  <url><loc>https://powersys.app/hp-kw-converter</loc></url>
+  <url><loc>https://powersys.app/awg-mm2-converter</loc></url>
+  <url><loc>https://powersys.app/standards</loc></url>
+  <url><loc>https://powersys.app/about</loc></url>
+  <url><loc>https://powersys.app/methodology</loc></url>
+  <url><loc>https://powersys.app/faq</loc></url>
+</urlset>

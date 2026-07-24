@@ -1,0 +1,14 @@
+{
+  "name": "PowerSys Calc",
+  "short_name": "PowerSys",
+  "description": "Engineering toolbox for power system design",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#0a1628",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "categories": ["productivity", "utilities", "education"]
+}
